@@ -31,7 +31,7 @@
         </section>
     </div>
 </template>
-<style>
+<style lang="scss">
     .slide {
         /*background-color: blue;*/
     }
