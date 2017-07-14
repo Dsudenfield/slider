@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick-theme.css"/>
+    <style type="text/css">
+         .slick-center .slide-h3{
+    color: #FFF;
+  }
+  .slider{
+    width: 600px;  
+    height:150px;
+    margin: 20px auto;    
+    text-align: center;
+  }
+  .slide-h3{
+    margin: 10% 0 10% 0;
+    padding: 40% 20%;
+    background: #008ed6;
+  }
+  .slider div{
+    margin-right: 5px;
+  }
+  .slick-slide{
+    opacity: .6;
+  }
+  .slick-center{
+    display: block;
+    max-width: 10% !important;
+    max-height:20% !important;
+    opacity: 1;
+
+
+  }
+    </style>
+</head>
+
+<body>
+ <section id="slick-content">
+  <div class="slider">
+    <div><div class="slide-h3">1</div></div>
+    <div><div class="slide-h3">2</div></div>
+    <div><div class="slide-h3">3</div></div>
+    <div><div class="slide-h3">4</div></div>
+    <div><div class="slide-h3">5</div></div>
+    <div><div class="slide-h3">6</div></div>
+
+  </div>
+
+</section>
+
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+
+  <script type="text/javascript">
+    $(document).ready(function(){
+
+        $('.slider').slick({
+              centerMode: true,
+              centerPadding: '60px',
+              slidesToShow: 1,
+              // speed:1500,
+              // index: 2,
+              responsive: [
+                {
+                  settings: {
+                    arrows: false,
+                    centerMode: true,
+                    centerPadding: '40px',
+                    slidesToShow: 3
+                  }
+                }
+              ]
+        });
+    
+
+    });
+  </script>
+</body>
+</html>
