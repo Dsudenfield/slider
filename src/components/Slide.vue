@@ -1,40 +1,53 @@
 <template>
     <div>
-        <section class="center slider">
-            <div>
-              <img src="http://placehold.it/350x300?text=1">
-            </div>
-            <div>
-              <img src="http://placehold.it/350x300?text=2">
-            </div>
-            <div>
-              <img src="http://placehold.it/350x300?text=3">
-            </div>
-            <div>
-              <img src="http://placehold.it/350x300?text=4">
-            </div>
-            <div>
-              <img src="http://placehold.it/350x300?text=5">
-            </div>
-            <div>
-              <img src="http://placehold.it/350x300?text=6">
-            </div>
-            <div>
-              <img src="http://placehold.it/350x300?text=7">
-            </div>
-            <div>
-              <img src="http://placehold.it/350x300?text=8">
-            </div>
-            <div>
-              <img src="http://placehold.it/350x300?text=9">
-            </div>
-        </section>
+      <section id="slick-content">
+        <div class="slider">
+          <div><div class="slide-h3">1</div></div>
+          <div><div class="slide-h3">2</div></div>
+          <div><div class="slide-h3">3</div></div>
+          <div><div class="slide-h3">4</div></div>
+          <div><div class="slide-h3">5</div></div>
+          <div><div class="slide-h3">6</div></div>
+        </div>
+      </section>
     </div>
 </template>
 <style lang="scss">
-    .slide {
-        /*background-color: blue;*/
+  .slick-content {
+    height:100%;
+  }
+  .slick-center .slide-h3{
+    color: #FFF;
+  }
+  .slider{
+    height: 100%;
+    width: 100%;
+    margin: 20px auto;    
+    text-align: center;
+  }
+  .slide-h3{
+    height: 100%;
+    margin: 10% 0 10% 0;
+    padding: 40% 20%;
+    background: #008ed6;
+  }
+  .slider div{
+    margin-right: 5px;
+  }
+  .slick-slide{
+    height: 100%;
+    &:focus {
+      outline: none;
     }
+    opacity: .6;
+  }
+  .slick-center{
+    height: 100%;
+    display: block;
+    max-width: 10% !important;
+    max-height:20% !important;
+    opacity: 1;
+  }
 </style>
 <script>
 import 'slick-carousel';
@@ -46,24 +59,23 @@ export default {
         }
     },
     mounted() {
-        
-        $('.center').slick({
-            infinite: true,
-            center: true,
-            slidesToShow: 3,
-            centerPadding: '60px',
-            slidesToScroll: 3,
-            responsive: [
+      $('.slider').slick({
+          centerMode: true,
+          centerPadding: '60px',
+          slidesToShow: 1,
+          // speed:1500,
+          // index: 2,
+          responsive: [
             {
-              breakpoint: 768,
               settings: {
-                center: true,
+                arrows: false,
+                centerMode: true,
                 centerPadding: '40px',
                 slidesToShow: 3
               }
-            },
+            }
           ]
-        });
+      });
     }
 }
 </script>
