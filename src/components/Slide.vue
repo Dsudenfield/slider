@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="row slider-wrapper">
       <section id="slick-content">
         <div class="slider">
           <div><div class="slide-h3">1</div></div>
@@ -13,7 +13,15 @@
     </div>
 </template>
 <style lang="scss">
-  .slick-content {
+  .slick-current {
+    height: 0rem !important;
+  }
+  .slider-wrapper, .slick-track, .slick-list, .slide-h3, .slick-slide {
+    height: 100%;
+    min-height: 100%;
+    max-height: 100%;
+  }
+  #slick-content {
     height:100%;
   }
   .slick-center .slide-h3{
@@ -25,7 +33,7 @@
     margin: 20px auto;    
     text-align: center;
   }
-  .slide-h3{
+  .slide-h3 {
     height: 100%;
     margin: 10% 0 10% 0;
     padding: 40% 20%;
@@ -63,6 +71,7 @@ export default {
           centerMode: true,
           centerPadding: '60px',
           slidesToShow: 1,
+          cssEase: 'linear',
           // speed:1500,
           // index: 2,
           responsive: [
